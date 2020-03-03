@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="templates/styles.css" type="text/css" rel="stylesheet"/>
+        <title>Search in Instagram</title>
+    </head>
+    <body>
+        <div class="center">
+            <h1>Search in Instagram</h1>
+
+            <form>
+                <div class="form-padding">
+                    <input type="text" name="tag" value="{{ tag }}" placeholder="Tag">
+                    <input type="submit" value="Search">
+                </div>
+            </form>
+
+            {% if images %}
+                <div class="image">
+                    {% for item in images %}
+                        <img src="{{ item }}"/>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
